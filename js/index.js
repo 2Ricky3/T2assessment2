@@ -17,13 +17,15 @@ function registerStudent() {
     };
   
     let jsonData = JSON.stringify(studentData);
+
+    sessionStorage.setItem('studentData', jsonData);
   
     console.log(jsonData);
     displayStudentData(studentData);
   }
   function displayStudentData(studentData) {
     let studentOut = document.getElementById('studentOut');
-  
+ 
     let card = document.createElement('div');
     card.className = 'col-4';
     card.innerHTML = `
